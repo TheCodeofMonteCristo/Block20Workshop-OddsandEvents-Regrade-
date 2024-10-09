@@ -1,0 +1,161 @@
+/* Overall Pseudocode Explaining how this Code functions:
+
+
+
+Explanation of the Overall CSS Page:
+Global Body Styles:
+
+Additional properties like font-family, background-color, and line-height improve readability and design.
+Flexbox layout is used to center content and structure it as a column.
+Header Styles:
+
+Added a header section that spans the full width of the page with a green background, white text, and shadow for depth.
+Main Section:
+
+Introduced a main content section with padding, a maximum width, and rounded corners.
+Added shadows for better visual separation.
+Button Styles:
+
+Created button styles with hover and active states, including smooth color transitions and slight shrinking on click.
+Enhanced Output:
+
+Expanded the output element's styles, including increased padding, shadow, and background color for a more noticeable result box.
+Form Styles:
+
+Added styles for forms, including flexible layout control, padding, and borders for better spacing and structure.
+Input Field Styles:
+
+Styled input fields with padding, border, and focus effects, providing better user experience and clear visual cues when interacting with form elements.
+Footer Section:
+
+Created a footer that sticks to the bottom of the page, with centered white text and a dark background for contrast.
+
+*/
+
+
+
+
+
+
+/* Global Styles for the entire body to establish the basic layout and design of the page */
+body {
+    padding: 1rem; /* Adds padding around the entire body for spacing from the edges of the viewport. */
+    margin: 0; /* Removes any default margin from the body. */
+    font-family: 'Arial', sans-serif; /* Sets a default font family for the entire document. */
+    background-color: #f0f0f0; /* Adds a light gray background color for better contrast. */
+    color: #333; /* Uses a dark gray for the default text color for better readability. */
+    line-height: 1.6; /* Improves text readability by increasing line height. */
+    display: flex; /* Uses flexbox to organize child elements horizontally. */
+    flex-direction: column; /* Arranges children in a column format. */
+    align-items: center; /* Centers the content horizontally on the page. */
+    justify-content: flex-start; /* Aligns content to the top of the page. */
+    height: 100vh; /* Ensures the body takes up the full viewport height. */
+}
+
+/* Styling for the header section of the page */
+header {
+    width: 100%; /* Makes the header span the full width of the page. */
+    text-align: center; /* Centers the header text. */
+    background-color: #4CAF50; /* Adds a green background to the header. */
+    color: white; /* Sets the header text color to white for contrast. */
+    padding: 1rem; /* Adds padding inside the header for spacing. */
+    border-bottom: 2px solid #388E3C; /* Adds a border at the bottom of the header for separation. */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth. */
+}
+
+/* Styling for main content sections */
+main {
+    width: 90%; /* Limits the width of the main content to 90% of the viewport. */
+    max-width: 1200px; /* Adds a maximum width for larger screens. */
+    margin: 2rem 0; /* Adds vertical spacing around the main content. */
+    background-color: white; /* Sets the background color of the main section to white. */
+    border-radius: 5px; /* Slightly rounds the corners of the main content box. */
+    padding: 2rem; /* Adds internal padding for content inside the main section. */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow around the main content box. */
+}
+
+/* Styling for buttons used within the page */
+button {
+    background-color: #008CBA; /* Adds a blue background to the buttons. */
+    color: white; /* Sets the button text color to white for contrast. */
+    border: none; /* Removes any default borders on the buttons. */
+    padding: 0.75rem 1.5rem; /* Adds padding to increase the clickable area of the button. */
+    font-size: 1rem; /* Sets a medium font size for button text. */
+    border-radius: 5px; /* Rounds the corners of the buttons slightly. */
+    cursor: pointer; /* Changes the cursor to indicate the button is clickable. */
+    transition: background-color 0.3s ease; /* Smooth transition for background color on hover. */
+}
+
+button:hover {
+    background-color: #005f73; /* Darkens the background color when the button is hovered. */
+}
+
+button:active {
+    background-color: #004047; /* Further darkens the background color when the button is clicked. */
+    transform: scale(0.98); /* Slightly shrinks the button to create a "press" effect. */
+}
+
+/* Styling for output elements to display results or feedback */
+output {
+    display: block; /* Ensures output is displayed as a block element, taking up full width. */
+    min-height: 2rem; /* Increases the minimum height for a larger output box. */
+    padding: 1rem; /* Adds more padding inside the output for better spacing. */
+    margin: 1rem 0; /* Adds vertical spacing around the output element. */
+    border: 1px solid #333; /* Sets a solid border for definition. */
+    border-radius: 4px; /* Slightly rounds the corners of the output element. */
+    background-color: #e9ecef; /* Adds a light background to visually separate the output from the content. */
+    font-size: 1rem; /* Sets a readable font size for the output text. */
+    font-weight: 500; /* Makes the output text slightly bolder. */
+    color: #2b2b2b; /* Sets a dark color for the text inside the output. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth. */
+}
+
+/* Styling for forms that may include input fields or submit buttons */
+form {
+    width: 100%; /* Ensures the form takes up full width within its container. */
+    max-width: 600px; /* Sets a maximum width to avoid the form stretching too wide. */
+    display: flex; /* Uses flexbox for better layout control within the form. */
+    flex-direction: column; /* Aligns form elements vertically. */
+    gap: 1rem; /* Adds space between form elements. */
+    padding: 1rem; /* Adds internal padding to the form for better spacing. */
+    border: 1px solid #ddd; /* Adds a light border around the form. */
+    border-radius: 4px; /* Slightly rounds the corners of the form. */
+    background-color: #fff; /* Sets the background of the form to white. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Adds a subtle shadow to the form. */
+}
+
+/* Styling for input fields within the form */
+input {
+    padding: 0.75rem; /* Adds padding to make the input fields easier to click and read. */
+    font-size: 1rem; /* Sets the font size for input text. */
+    border: 1px solid #ccc; /* Adds a light border around the input field. */
+    border-radius: 3px; /* Slightly rounds the corners of the input field. */
+    background-color: #f9f9f9; /* Gives the input field a light background color. */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Adds a subtle inner shadow for depth. */
+    width: 100%; /* Makes the input field take up the full width of its container. */
+}
+
+input:focus {
+    border-color: #008CBA; /* Changes the border color to blue when the input is focused. */
+    outline: none; /* Removes the default outline for cleaner focus styling. */
+    box-shadow: 0 0 5px rgba(0, 140, 186, 0.5); /* Adds a blue glow effect when the input is focused. */
+}
+
+/* Styling for footer section */
+footer {
+    width: 100%; /* Footer spans the full width of the page. */
+    text-align: center; /* Centers the text within the footer. */
+    padding: 1rem; /* Adds padding inside the footer for spacing. */
+    background-color: #333; /* Sets a dark background color for the footer. */
+    color: #fff; /* Changes the footer text to white for contrast. */
+    position: absolute; /* Positions the footer at the bottom of the viewport. */
+    bottom: 0; /* Ensures the footer sticks to the bottom of the page. */
+}
+
+
+
+
+
+
+
+

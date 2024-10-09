@@ -1,0 +1,62 @@
+<!-- Overall Pseudocode Explaining how this Code functions:
+ 
+
+Summary
+Overall, this HTML code sets up a basic user interface for adding, sorting, and displaying numbers. 
+It includes a form for input, buttons for actions, and sections for displaying results, 
+all styled and made functional through external CSS and JavaScript files. 
+The use of semantic HTML tags enhances accessibility and clarity in the document's structure.
+-->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The head section contains metadata for character encoding, viewport settings for responsive design, 
+         the page title, and links to external stylesheets and scripts for styling and functionality. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odds and Events</title>
+    <link rel="stylesheet" href="index.css" /> <!-- Link to the external CSS file for styling -->
+    <script defer src="index.js"></script> <!-- Defer script loading to ensure HTML is parsed first -->
+  </head>
+  <body>
+    <h1>Odds and Events</h1>
+    <form>
+      <!-- Form for adding a number to the bank, with a label and an input field for numeric input. -->
+      <label>
+        Add a Number to the Bank
+        <input id="number" name="number" type="number" />
+      </label>
+      <button type="submit">Add Number</button> <!-- Button to submit the form and add the number -->
+    </form>
+    <main>
+      <section id="numberBank">
+        <h2>Number Bank</h2>
+        <output></output> <!-- Output element for displaying the current bank of numbers -->
+        <div>
+          <button id="sortOne">Sort 1</button> <!-- Button to sort a single number -->
+          <button id="sortAll">Sort All</button> <!-- Button to sort all numbers in the bank -->
+        </div>
+      </section>
+      <section id="sortedNumbers">
+        <h2>Sorted Numbers</h2>
+        <section id="odds">
+          <h3>Odds</h3>
+          <output></output> <!-- Output for displaying sorted odd numbers -->
+        </section>
+        <section id="evens">
+          <h3>Evens</h3>
+          <output></output> <!-- Output for displaying sorted even numbers -->
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
